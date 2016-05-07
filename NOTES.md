@@ -16,3 +16,13 @@
 ### Loops:
 * 'unless' is the opposite of IF; its code won't execute unless a statement is false
 * 'until' is the opposite of WHILE; its code executes repeatedly until a condition is true
+
+### Classes:
+* consider classes to be templates for new objects you wish to instantiate
+* instance variables --> what objects "know"
+* instance methods --> what objects do
+
+### Methods:
+* method names ending in "?" usually return booleans, and are not treated specially by the interpreter
+* method names ending in "!" are expected to return "surprising" values, and are not treated specially be the interpreter
+* method names ending in "=" are use as attribute writers, but are treated specially by the interpreter
