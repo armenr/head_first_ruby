@@ -48,7 +48,8 @@
         * methods you call directly on that object
         * have access to the object's instance variables and use them to change their behavior based on values in those variables
 * an *instance* of a class is an object that was made using that class (1 class:many instances)
-* Example "dog" class:
+* Example "dog" class
+
 | class type:                 	|            DOG           	|
 |-----------------------------	|:------------------------:	|
 | instance variables (state)  	| name,  age               	|
