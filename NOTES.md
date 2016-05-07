@@ -12,3 +12,7 @@
 ### Method notes:
 * when using something.to_i, you don't have to chomp - all non-numeric characters are ignored
 * use 'inspect' & 'p' methods to view debug output for Ruby objects
+
+### Loops:
+* 'unless' is the opposite of IF; its code won't execute unless a statement is false
+* 'until' is the opposite of WHILE; its code executes repeatedly until a condition is true
