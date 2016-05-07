@@ -14,7 +14,10 @@ def use_headlights(brightness = "low-beam")
 end
 
 def mileage(miles_driven, gas_used)
-  return miles_driven / gas_used
+  if gas_used == 0 # <--- Without this, a brand new car's mileage method would return an error (divide by 0)
+    return 0.0    # <--- Return here prevents the rest of the method from running
+  end
+  miles_driven / gas_used # <--- the return here is implicit
 end
 
 trip_mileage = mileage(400, 12)

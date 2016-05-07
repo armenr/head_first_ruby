@@ -1,5 +1,5 @@
 ## Here be notes I take.
-*Ruby is an interpreted language.*
+*Ruby is an interpreted language. Yay.*
 
 ### Basics:
 * puts = newline @ end of string
@@ -34,3 +34,22 @@
     * arguments -> passed to method calls where parameters are defined
 * plainly stated -> return values are cool, bruh
     * the value of the *last* expression evaluated within a given method automatically becomes that method's return value
+
+### Objects & Classes
+*If classes are cookie cutters, objects are the cookies they make.*
+
+* objects keep a sat of data, and the methods that operate on that data, in one place
+* a class is a blueprint for making objects - the class describes what that objects knows about itself, and what that object does
+    * instance variables -> what an object knows about itself
+        * variables that belong to one object
+        * represent the object's state
+        * can have different values for each instance of that class
+    * instance methods -> things an object does
+        * methods you call directly on that object
+        * have access to the object's instance variables and use them to change their behavior based on values in those variables
+* an *instance* of a class is an object that was made using that class (1 class:many instances)
+* Example "dog" class:
+| class type:                 	|            DOG           	|
+|-----------------------------	|:------------------------:	|
+| instance variables (state)  	| name,  age               	|
+| instance methods (behavior) 	| talk,  move,  report age 	|
