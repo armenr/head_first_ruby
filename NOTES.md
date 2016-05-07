@@ -11,3 +11,4 @@
 
 ### Method notes:
 * when using something.to_i, you don't have to chomp - all non-numeric characters are ignored
+* use 'inspect' & 'p' methods to view debug output for Ruby objects
