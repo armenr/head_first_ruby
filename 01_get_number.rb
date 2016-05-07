@@ -5,7 +5,7 @@
 puts "Welcome to 'this simplistic exercise of a game!'"
 print "What's your name? "
 input = gets.chomp
-puts "Welcome, #{input}"
+puts "Welcome, #{input}\!"
 
 # Store a random number for the player to guess
 # stylistically, is it better to escape & single quote, or to use doubles and not escape?
