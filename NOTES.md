@@ -27,3 +27,6 @@
 * method names ending in "!" are expected to return "surprising" values, and are not treated specially be the interpreter
 * method names ending in "=" are use as attribute writers, but are treated specially by the interpreter
 * required method parameters must be ordered before optional method parameters - pass 'nil' to use default optional param value 
+* arguments vs parameters: you define and use parameters WITHIN a method definition & provide arguments with method calls
+    * parameters -> defined within method definitions
+    * arguments -> passed to method calls where parameters are defined
