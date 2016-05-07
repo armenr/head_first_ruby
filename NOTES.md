@@ -1,4 +1,5 @@
-## Here be notes I take. Organizing notes in markdown is not my strongest suit. Who cares.
+## Here be notes I take.
+*Ruby is an interpreted language.*
 
 ### Basics:
 * puts = newline @ end of string
