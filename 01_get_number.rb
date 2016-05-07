@@ -5,7 +5,7 @@
 puts "Welcome to 'this simplistic exercise of a game!'"
 print "What's your name? "
 input = gets.chomp
-puts "Welcome, #{input}\!"
+puts "Welcome, #{input}!"
 
 # Store a random number for the player to guess
 # stylistically, is it better to escape & single quote, or to use doubles and not escape?
@@ -39,6 +39,7 @@ until num_guesses == 10 || guessed_it
     puts "You guessed my number in #{num_guesses} guesses!"
     guessed_it = true
   end
+
 end
 
 # If player ran out of turns, tell them what the number was, and call them stupid.
