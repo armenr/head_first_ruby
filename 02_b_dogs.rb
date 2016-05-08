@@ -1,6 +1,22 @@
 class Dog
 
-  attr_accessor :name, :age
+  attr_reader :name, :age
+
+  def name=(value)
+    if name == ""
+      puts "Name can't be blank!"
+    else
+      @name = value
+    end
+  end
+
+  def age=(value)
+    if value <= 0
+      puts "An age of #{value} cannot be less than or equal to zero."
+    else
+      @name = value
+    end
+  end
 
   def report_age
     puts "#{@name} the dog, is #{@age} years old, dawg."
@@ -14,24 +30,4 @@ class Dog
     puts "#{name} runs to the #{destination}."
   end
 
-end
-
-class Bird
-  def talk(name)
-    puts "#{name} chirps!"
-  end
-
-  def move(name, destination)
-    puts "#{name} flies to the #{destination}."
-  end
-end
-
-class Cat
-  def talk(name)
-    puts "#{name} meows, muufucka!"
-  end
-
-  def move(name, destination)
-    puts "#{name} pounces on the #{destination}"
-  end
 end
