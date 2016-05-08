@@ -4,6 +4,12 @@
 ### Basics:
 * puts = newline @ end of string
 * print = no newline @ end of string
+* instance variable: stays within an object and stores data about that object
+* attribute: another name for a piece of data about an object, stored in an instance variable
+* local variable: stores data within a method, disappears when the method returns
+* accessor method: particular kind of instance method, the main purpose of which is to read or write an instance variable
+* symbol: used in Ruby programs to refer to things whose names don't change (like methods)
+
 
 ### Interpolation:
 * you can put ruby expressions inside of #{...} notation, not just variable substitutions

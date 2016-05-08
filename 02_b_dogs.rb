@@ -16,7 +16,6 @@ class Dog
 
 end
 
-
 class Bird
   def talk(name)
     puts "#{name} chirps!"
