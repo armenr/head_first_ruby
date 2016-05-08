@@ -92,4 +92,18 @@
 
         attr_accessor :name, :age 
        * Defines 4 methods at once (reader/writer pair for each instance variable
+  * if you want to shortcut the code, but validate data passed to a method, you can delegate attr_reader, but write your own writer methods with validation constraints
         
+### Let's talk about inheritance
+* allow for multiple subclasses to inherit methods from a single superclass - to avoid maintenance issues & mass refactors
+* subclasses inherit instance methods from superclasses, but they do *not* inherit instance variables!
+    * instance variables belong to the object, not the class
+    * inherited instance methods create the instance variable on the OBJECT, when the instance method is called
+    * in many other OO languages, instance variables are declared on the class, but not so in Ruby - worth knowing
+    * if a subclass uses the same instance variable name (for a different accessor method/attribute than its parent) as its superclass, it will overwrite the attribute in the superclass without being smart enough to know its addressing something totally different
+    * variable names should match attribute accessor names in all classes
+* if a superclass's behavior isn't what you need in the subclass, inheritance permits method overrides
+    * you can replace the inherited methods from the superclass with subclass-specific methods
+    * ruby will recurse upwards when a method call is made, starting from the subclass up to the superclass - so if you've overriden a superclass method in a subclass, it will find it there and execute it without moving up the inheritance tree to find the method you've called
+* as a general practice, most Rubyists don't go deeper than 2 or 3 levels of inheritance 
+    * --> superclass (vehicle) --> subclass (car) --> subclass of subclass (drag_racer)
