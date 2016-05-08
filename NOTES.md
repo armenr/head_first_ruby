@@ -54,3 +54,13 @@
 |-----------------------------	|:------------------------:	|
 | instance variables (state)  	| name,  age               	|
 | instance methods (behavior) 	| talk,  move,  report age 	|
+
+### Variables
+* local variables - local to the current scope (usually the current method) - when the current scope ends, local variables cease to exist
+    * "variable_name"
+* instance variables - tied to a particular object instance; data written to an object's instance variables stays with that object, getting removed from mem only when the object is removed
+    * "@variable_name"
+* encapsulation prevents other parts of the program from directly accessing or changing an object's instance variables - this is code sanity/safety
+* ACCESSOR METHODS write values to the instance variables and read them back out again for you - they also extend to validate or reject bad values passed in
+    * def my_attribute=(new_value) <-- "=" is considered part of the method name (special treatment!)
+    
