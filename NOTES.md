@@ -63,4 +63,16 @@
 * encapsulation prevents other parts of the program from directly accessing or changing an object's instance variables - this is code sanity/safety
 * ACCESSOR METHODS write values to the instance variables and read them back out again for you - they also extend to validate or reject bad values passed in
     * def my_attribute=(new_value) <-- "=" is considered part of the method name (special treatment!)
-    
+    * the name of an attribute reader method should usually match the name of the instance variable it reads from (without the @ symbol, obviously)
+        * ```
+            def tail_length
+              @tail_length
+             end
+          ```
+    * the name of an attribute writer method should usually match the name of the instance variable it writes to, with and "=" symbol on the end of the name
+        * ```
+            def tail_length=(value)
+              @tail_length = value
+             end
+          ```
+SO, rather than write accessors (reader/writer) by hand for each attribute, what can we do?
