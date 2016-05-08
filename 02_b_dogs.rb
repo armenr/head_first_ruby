@@ -46,37 +46,49 @@
 class Dog
 
   # ability to access name variable & write a new value to it - writer accessor
-  def name=(new_name)
-    @name = new_name
-  end
-
+  # def name=(new_name)
+  #   @name = new_name
+  # end
+  #
   # ability to read the value from @name
-  def name
-    @name
-  end
+  # def name
+  #   @name
+  # end
+  #
+  # def age=(new_age)
+  #   @age = new_age
+  # end
+  #
+  # def age
+  #   @age
+  # end
+  #
+  # fido = Dog.new      # instantiate fido instance of Dog class
+  # fido.name = "Fido"  # set @name for Dog.fido
+  # fido.age = 2        # set @age for Dog.fido
+  # rex = Dog.new       # instantiate rex instance of Dog class
+  # rex.name = "Rex"    # set @name for Dog.rex
+  # rex.age = 14        # set @age for Dog.rex
+  # fido.report_age
+  # rex.report.age
 
-  def age=(new_age)
-    @age = new_age
-  end
+  # ^^ This has been replaced with what's below - :D
 
-  def age
-    @age
-  end
+  attr_accessor :name, :age
 
   def report_age
     puts "#{@name} the dog, is #{@age} years old, dawg."
   end
 
-end
+  def talk
+    puts "#{name} barks!"
+  end
 
-fido = Dog.new      # instantiate fido instance of Dog class
-fido.name = "Fido"  # set @name for Dog.fido
-fido.age = 2        # set @age for Dog.fido
-rex = Dog.new       # instantiate rex instance of Dog class
-rex.name = "Rex"    # set @name for Dog.rex
-rex.age = 14        # set @age for Dog.rex
-fido.report_age
-rex.report.age
+  def move
+    puts "#{name} runs to the #{destination}."
+  end
+
+end
 
 
 class Bird

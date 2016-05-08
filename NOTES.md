@@ -75,4 +75,15 @@
               @tail_length = value
              end
           ```
-SO, rather than write accessors (reader/writer) by hand for each attribute, what can we do?
+          
+    * SO, rather than write accessors (reader/writer) by hand for each attribute, what can we do?
+    
+    | write this          | Ruby auto-defines these                      |
+    |---------------------|----------------------------------------------|
+    | attr_writer :name   | def name=(new_value)   @name = new_value end |
+    | attr_reader :name   | def name   @name end                         |
+    | attr_accessor :name | both methods in row 2 + row 3                |
+
+        attr_accessor :name, :age 
+       * Defines 4 methods at once (reader/writer pair for each instance variable
+        
