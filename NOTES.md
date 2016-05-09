@@ -107,3 +107,7 @@
     * ruby will recurse upwards when a method call is made, starting from the subclass up to the superclass - so if you've overriden a superclass method in a subclass, it will find it there and execute it without moving up the inheritance tree to find the method you've called
 * as a general practice, most Rubyists don't go deeper than 2 or 3 levels of inheritance 
     * --> superclass (vehicle) --> subclass (car) --> subclass of subclass (drag_racer)
+  * when you define a method override for a subclass, you can use the "super" keyword which will call back to the method in the superclass - the superclass's return value becomes the value of the super expression
+    * super() calls the overriden method with NO arguments, even if the overriding method DID receive arguments
+    * super calls the overriden method with the same arguments the overriding method recieved
+
