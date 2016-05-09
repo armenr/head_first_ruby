@@ -23,7 +23,7 @@ class Animal
   def move(destination)
     puts "#{@name} runs to #{destination}"
   end
-  
+
   def report_age
     puts "#{name} is #{age} years young."
   end
@@ -40,9 +40,14 @@ class Bird < Animal
 end
 
 class Cat < Animal
- def talk
-   puts "#{name} says MEOW!"
+  def talk
+    puts "#{name} says MEOW!"
+  end
 end
 
+class Armadillo < Animal
+  def move(destination)
+    puts "#{@name} unrolls!"
+    puts "#{@name} scurries to the #{destination}"
+  end
 end
-
