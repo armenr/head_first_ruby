@@ -1,33 +1,44 @@
-class Dog
+class Animal
 
   attr_reader :name, :age
 
   def name=(value)
-    if name == ""
+    if value == ""
       raise "Name can't be blank!"
-    else
-      @name = value
     end
+    @name = value
   end
 
   def age=(value)
-    if value <= 0
-      raise "An age of #{value} cannot be less than or equal to zero."
-    else
-      @name = value
-    end
+  if value <= 0
+    raise "You must specifay a real (nonzero) age, please."
+  end
+    @age = value
   end
 
   def talk
-    puts "#{name} barks!"
-  end
-
-  def move
-    puts "#{name} runs to the #{destination}."
+    puts "#{@name} says WOOF!"
   end
 
   def report_age
-    puts "#{@name} the dog, is #{@age} years old, dawg."
+    puts "#{name} is #{age} years young."
   end
 
 end
+
+class Dog < Animal
+end
+
+class Bird < Animal
+  def talk
+    puts "#{name} says MEOW!"
+  end
+end
+
+class Cat < Animal
+ def talk
+   puts "#{name} says MEOW!"
+end
+  
+end
+
