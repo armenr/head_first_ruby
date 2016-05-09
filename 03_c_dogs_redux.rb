@@ -20,6 +20,10 @@ class Animal
     puts "#{@name} says WOOF!"
   end
 
+  def move(destination)
+    puts "#{@name} runs to #{destination}"
+  end
+  
   def report_age
     puts "#{name} is #{age} years young."
   end
@@ -39,6 +43,6 @@ class Cat < Animal
  def talk
    puts "#{name} says MEOW!"
 end
-  
+
 end
 
