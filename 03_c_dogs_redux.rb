@@ -31,6 +31,9 @@ class Animal
 end
 
 class Dog < Animal
+  def to_s
+    "#{@name} the dog, age #{age}."
+  end
 end
 
 class Bird < Animal
@@ -52,3 +55,21 @@ class Armadillo < Animal
     super # ^^ pulls this from ANIMAL superclass
   end
 end
+
+## Important note about inheritance below
+
+lucy = Dog.new
+lucy.name = "Lucy"
+lucy.age = 4
+
+rex = Dog.new
+rex.name = "Rex"
+rex.age = 2
+
+puts lucy.to_s, rex.to_s
+# --> Produces #<Dog:0x007fb06991b7b8>
+               #<Dog:0x007fb06991b678>
+# before adding the to_s override on class "Dog"
+# AFTER to_s override on "Dog", we get
+#Lucy the dog, age 4.
+#Rex the dog, age 2.

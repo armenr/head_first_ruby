@@ -110,4 +110,11 @@
   * when you define a method override for a subclass, you can use the "super" keyword which will call back to the method in the superclass - the superclass's return value becomes the value of the super expression
     * super() calls the overriden method with NO arguments, even if the overriding method DID receive arguments
     * super calls the overriden method with the same arguments the overriding method recieved
+* *EVERYTHING* inherits from the "Object" superclass - ergo, "everything in Ruby is an object"
 
+### Useful methods for objects & things
+* to_s - converts an object to a string for printing
+* inspect - converts an object to a debug string
+* class - tells you which class an object is an instance of
+* methods - tells you what instance methods an object has
+* instance_variables - prints list of an object's instance variables
